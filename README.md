@@ -14,8 +14,10 @@
 
 ### 🚀 Quick Access
 > [!IMPORTANT]
-> **Access the notes here:**
-> 👉 **[diptanshudhawan.github.io/eJPT-Notes](https://diptanshudhawan.github.io/eJPT-Notes-Diptanshu-Dhawan-/)**
+> **Access the specific modules of my notes below:**
+> * 🏠 **[Main eJPT Study Notes](https://diptanshudhawan.github.io/eJPT-Notes-Diptanshu-Dhawan-/)**
+> * 🎯 **[Metasploit Framework Notes](https://diptanshudhawan.github.io/eJPT-Notes-Diptanshu-Dhawan-/METASPLOIT%20FRAMEWORK%2028465c019416802daba7cfc9989b5291.html)**
+> * 📝 **[Additional Resources & Notes](https://diptanshudhawan.github.io/eJPT-Notes-Diptanshu-Dhawan-/ADDITIONAL%20NOTES%2027165c01941680698465d76c22d42829.html)**
 
 ---
 
