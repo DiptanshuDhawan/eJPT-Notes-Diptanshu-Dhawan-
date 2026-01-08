@@ -1,24 +1,28 @@
-<p align="center">
-  <img src="https://img.shields.io/badge/eJPT-Certified-green?style=for-the-badge&logo=checkpoint&logoColor=white" />
-  <img src="https://api.visitorbadge.io/api/visitors?path=DiptanshuDhawan.eJPT-Notes&label=NOTES%20READS&countColor=%2326313c&style=for-the-badge" />
-</p>
-
 # 🛡️ eJPT Study Notes & Resources
 
-Hi! I passed the **eJPT (eLearnSecurity Junior Penetration Tester)** certification. During my preparation, I compiled a detailed knowledge base in Notion to track tools, methodologies, and labs. I hope these help you on your own certification journey!
+<p align="left">
+  <a href="https://diptanshudhawan.github.io/eJPT-Notes-Diptanshu-Dhawan-/">
+    <img src="https://img.shields.io/badge/📖_Read_The_Notes-Click_Here-blue?style=for-the-badge&logo=read-the-docs&logoColor=white" />
+  </a>
+  <img src="https://img.shields.io/badge/eJPT-Certified-green?style=for-the-badge&logo=checkpoint&logoColor=white" />
+  <img src="https://api.visitorbadge.io/api/visitors?path=DiptanshuDhawan.eJPT-Notes&label=VIEWS&countColor=%2326313c&style=for-the-badge" />
+  <img src="https://img.shields.io/badge/Path-Penetration_Testing_Student-purple?style=for-the-badge&logo=target&logoColor=white" />
+  <img src="https://img.shields.io/badge/Difficulty-Entry_Level_/_Intermediate-blue?style=for-the-badge&logo=skillshare&logoColor=white" />
+</p>
 
 ---
 
-## 🌐 View Live Notes
-You can browse the full interactive web version of my notes here:
-👉 **[Click Here to Open the Study Notes](https://diptanshudhawan.github.io/eJPT-Notes-Diptanshu-Dhawan-/)**
-
-> [!TIP]
-> **Quick Search:** Since these are exported Notion pages, the best way to find a specific command (like `msfvenom`) is to use **`Ctrl + F`** while viewing the live site.
+### 🚀 Quick Access
+> [!IMPORTANT]
+> **Access the notes here:**
+> 👉 **[diptanshudhawan.github.io/eJPT-Notes](https://diptanshudhawan.github.io/eJPT-Notes-Diptanshu-Dhawan-/)**
 
 ---
 
-## 📺 eJPT Experience
+## 👋 Introduction
+Hi! I passed the **eJPT (eLearnSecurity Junior Penetration Tester)** certification. During my preparation, I compiled a detailed knowledge base in Notion to track tools, methodologies, and labs. These notes are designed to be a "cheat sheet" for anyone taking the exam.
+
+## 📺 Exam Experience & Tips
 I recorded a full breakdown of my exam experience, study path, and tips on my YouTube channel.
 - 🎥 **Watch the video:** [HackWithDD - My eJPT Journey](https://youtu.be/ympDYwlDWxg)
 
@@ -40,10 +44,11 @@ I recorded a full breakdown of my exam experience, study path, and tips on my Yo
 * 🎯 **Metasploit Notes:** Comprehensive guides on MSFconsole, modules, and payloads.
 * 🚀 **Exploitation:** Manual Exploits and Web Attacks.
 * 🛡️ **Post-Exploitation:** Privilege Escalation & Local Enumeration.
+
 ---
 
 ## 🤝 Connect With Me
-Feel free to reach out if you have any questions or just want to talk!!
+Feel free to reach out if you have any questions or just want to talk hacking!
 
 [![Website](https://img.shields.io/badge/Website-000000?style=for-the-badge&logo=About.me&logoColor=white)](https://diptanshu.tech)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/diptanshudhawan)
