@@ -11,7 +11,7 @@ Hi! I passed the **eJPT (eLearnSecurity Junior Penetration Tester)** certificati
 
 ## 🌐 View Live Notes
 You can browse the full interactive web version of my notes here:
-👉 **[Click Here to Open the Study Notes](https://DiptanshuDhawan.github.io/eJPT-Notes-Diptanshu-Dhawan-)**
+👉 **[Click Here to Open the Study Notes](https://diptanshudhawan.github.io/eJPT-Notes-Diptanshu-Dhawan-/)**
 
 > [!TIP]
 > **Quick Search:** Since these are exported Notion pages, the best way to find a specific command (like `msfvenom`) is to use **`Ctrl + F`** while viewing the live site.
