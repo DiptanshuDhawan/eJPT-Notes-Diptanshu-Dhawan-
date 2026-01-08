@@ -48,7 +48,7 @@ I recorded a full breakdown of my exam experience, study path, and tips on my Yo
 ---
 
 ## 🤝 Connect With Me
-Feel free to reach out if you have any questions or just want to talk hacking!
+Feel free to reach out if you have any questions or just want to talk!!
 
 [![Website](https://img.shields.io/badge/Website-000000?style=for-the-badge&logo=About.me&logoColor=white)](https://diptanshu.tech)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/diptanshudhawan)
