@@ -1,0 +1,728 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>PASSIVE </title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+/* Override strong tags inside headings to maintain consistent weight */
+h1 strong,
+h2 strong,
+h3 strong {
+	font-weight: 600;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 10px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.collection-content td {
+	white-space: pre-wrap;
+	word-break: break-word;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+	margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.callout img.notion-static-icon {
+	width: 1em;
+	height: 1em;
+}
+
+.callout p {
+	margin: 0;
+}
+
+.callout h1,
+.callout h2,
+.callout h3 {
+	margin: 0 0 0.6rem;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+blockquote.quote-large {
+	font-size: 1.25em;
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.highlight-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.highlight-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.highlight-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.highlight-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.highlight-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.highlight-default_background {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray_background {
+	background: rgba(42, 28, 0, 0.07);
+}
+.highlight-brown_background {
+	background: rgba(139, 46, 0, 0.086);
+}
+.highlight-orange_background {
+	background: rgba(224, 101, 1, 0.129);
+}
+.highlight-yellow_background {
+	background: rgba(211, 168, 0, 0.137);
+}
+.highlight-teal_background {
+	background: rgba(0, 100, 45, 0.09);
+}
+.highlight-blue_background {
+	background: rgba(0, 124, 215, 0.094);
+}
+.highlight-purple_background {
+	background: rgba(102, 0, 178, 0.078);
+}
+.highlight-pink_background {
+	background: rgba(197, 0, 93, 0.086);
+}
+.highlight-red_background {
+	background: rgba(223, 22, 0, 0.094);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.block-color-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.block-color-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.block-color-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.block-color-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.block-color-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(240, 239, 237, 1);
+}
+.block-color-brown_background {
+	background: rgba(245, 237, 233, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 235, 222, 1);
+}
+.block-color-yellow_background {
+	background: rgba(249, 243, 220, 1);
+}
+.block-color-teal_background {
+	background: rgba(232, 241, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(229, 242, 252, 1);
+}
+.block-color-purple_background {
+	background: rgba(243, 235, 249, 1);
+}
+.block-color-pink_background {
+	background: rgba(250, 233, 241, 1);
+}
+.block-color-red_background {
+	background: rgba(252, 233, 231, 1);
+}
+.select-value-color-default { background-color: rgba(42, 28, 0, 0.07); }
+.select-value-color-gray { background-color: rgba(28, 19, 1, 0.11); }
+.select-value-color-brown { background-color: rgba(127, 51, 0, 0.156); }
+.select-value-color-orange { background-color: rgba(196, 88, 0, 0.203); }
+.select-value-color-yellow { background-color: rgba(209, 156, 0, 0.282); }
+.select-value-color-green { background-color: rgba(0, 96, 38, 0.156); }
+.select-value-color-blue { background-color: rgba(0, 118, 217, 0.203); }
+.select-value-color-purple { background-color: rgba(92, 0, 163, 0.141); }
+.select-value-color-pink { background-color: rgba(183, 0, 78, 0.152); }
+.select-value-color-red { background-color: rgba(206, 24, 0, 0.164); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="26a65c01-9416-8080-9cd5-fc026c9aceaf" class="page sans"><header><img class="page-cover-image" src="PASSIVE/Passive_banenr.png" style="object-position:center 38.470000000000006%"/><div class="page-header-icon page-header-icon-with-cover"><img class="icon" src="PASSIVE/Passive_icon.png"/></div><h1 class="page-title" dir="auto">PASSIVE </h1><p class="page-description" dir="auto"></p></header><div class="page-body"><div style="display:contents" dir="auto"><h2 id="26a65c01-9416-8073-837c-f6f5fa7061a0" class=""><mark class="highlight-teal">Initial Website RECON &amp; FOOT PRINTING:</mark></h2></div><div style="display:contents" dir="auto"><p id="26a65c01-9416-80a5-b5cf-d3dd2227368f" class="">
+</p></div><div style="display:contents" dir="auto"><ol type="1" id="26a65c01-9416-800b-8d2f-fe57a80cbd30" class="numbered-list" start="1"><li><code>host command</code>: Used to lookup IP addresses from domain names.</li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="26a65c01-9416-809b-99a2-fb6360848899" class="numbered-list" start="2"><li><code>nslookup</code>: Performs DNS lookup.</li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="26a65c01-9416-8060-8b5b-c5a042d12b48" class="numbered-list" start="3"><li><code>robots.txt file</code>: Shows disallowed entries—files or folders you don&#x27;t want search engines to index.</li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="26a65c01-9416-8028-a57d-d15a9774fd10" class="numbered-list" start="4"><li><code>sitemap.xml file</code>:  serves as a roadmap for search engines like Google. It lists all important pages, videos, and images on a website, telling search engines exactly where everything is located.</li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="26a65c01-9416-80a2-91fd-f046cbbc0fb6" class="numbered-list" start="5"><li>Browser plugins OR Web extensions:<div style="display:contents" dir="auto"><ol type="a" id="26a65c01-9416-8007-a4d5-ef394bca2493" class="numbered-list" start="1"><li><code>Builtwith</code>: Identifies and displays technologies used on any webpage you visit.</li></ol></div><div style="display:contents" dir="auto"><ol type="a" id="26a65c01-9416-808d-b09d-dacd4a3b6696" class="numbered-list" start="2"><li><code>Wappalyzer</code>: Identifies technologies on websites.</li></ol></div><div style="display:contents" dir="auto"><p id="26a65c01-9416-809b-8253-de42a97919a1" class="">
+</p></div></li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="26a65c01-9416-80b8-aabc-e31ecb976ff0" class="numbered-list" start="6"><li><code>whatweb </code>command : Web scanner that identifies technologies used by websites, including content management systems (CMS), JavaScript libraries, web servers, and other components.</li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="26a65c01-9416-805d-9fcc-eeba0ff3cc39" class="numbered-list" start="7"><li>Downloading entire website: <code>HTTrack </code>WEBSITE COPIER. {sudo apt-get install webhttrack}</li></ol></div><div style="display:contents" dir="auto"><p id="26a65c01-9416-80a9-87ad-c4ff9b46fd76" class="">
+</p></div><div style="display:contents" dir="auto"><p id="26a65c01-9416-8086-b995-f77a82cdb85c" class="">
+</p></div><div style="display:contents" dir="auto"><p id="26a65c01-9416-80a4-b756-c53f13081ec9" class=""><code>WHOIS</code> Lookup:</p></div><div style="display:contents" dir="auto"><ul id="26a65c01-9416-803a-8cea-c11d5bc6cd13" class="bulleted-list"><li style="list-style-type:disc"><strong>Registrant Information</strong>: Name, organization, email address, phone number, and physical address of the domain owner. This information can be useful for social engineering or identifying points of contact.</li></ul></div><div style="display:contents" dir="auto"><ul id="26a65c01-9416-8060-b32f-d0ab745a0646" class="bulleted-list"><li style="list-style-type:disc">Registration and Expiration Dates:</li></ul></div><div style="display:contents" dir="auto"><ul id="26a65c01-9416-807b-8c5e-e933869ec341" class="bulleted-list"><li style="list-style-type:disc"><strong>Creation Date</strong>: Helps assess how long the domain has been active, which can indicate legitimacy or potential use in phishing campaigns.</li></ul></div><div style="display:contents" dir="auto"><ul id="26a65c01-9416-8016-9b4e-f03cc737c2b7" class="bulleted-list"><li style="list-style-type:disc">Expiration Date: Domains close to expiration may be vulnerable to takeover if not renewed.</li></ul></div><div style="display:contents" dir="auto"><ul id="26a65c01-9416-8041-82e1-e6e214f7372b" class="bulleted-list"><li style="list-style-type:disc">Updated Date: Frequent changes might suggest active development or recent ownership changes.</li></ul></div><div style="display:contents" dir="auto"><p id="26a65c01-9416-80db-a3f8-e3f51e01148c" class="">
+</p></div><div style="display:contents" dir="auto"><p id="26a65c01-9416-8056-a775-d649c325005a" class=""><code>Netcraft</code>:  Passively analyzes website infrastructure. Helps Fingerprint tech stack and map infrastructure without direct contact.<div class="indented"><div style="display:contents" dir="auto"><ul id="26a65c01-9416-80ac-aa78-f5ffdb4d00bf" class="bulleted-list"><li style="list-style-type:disc">Hosting Provider and IP History</li></ul></div><div style="display:contents" dir="auto"><ul id="26a65c01-9416-803a-a3b0-fe7d774023a5" class="bulleted-list"><li style="list-style-type:disc">Web Server and Operating System (e.g., Nginx on Linux)</li></ul></div><div style="display:contents" dir="auto"><ul id="26a65c01-9416-8074-a5d6-c17012e49b8e" class="bulleted-list"><li style="list-style-type:disc">SSL/TLS Certificate information</li></ul></div><div style="display:contents" dir="auto"><ul id="26a65c01-9416-80a4-a2d2-ded90e60d9f6" class="bulleted-list"><li style="list-style-type:disc">Subdomains</li></ul></div><div style="display:contents" dir="auto"><p id="26a65c01-9416-8044-9e70-ecf0afa8da30" class="">
+</p></div></div></p></div><div style="display:contents" dir="auto"><h2 id="26a65c01-9416-809c-9161-daf33111dcc6" class=""><mark class="highlight-teal">DNS Recon</mark><mark class="highlight-default">:</mark></h2></div><div style="display:contents" dir="auto"><p id="26a65c01-9416-80cb-adbf-ffa00d7f5c72" class=""><code><a href="https://dnsdumpster.com">dnsdumbster</a></code> : DNS recon &amp; research, find &amp; lookup DNS records. </p></div><div style="display:contents" dir="ltr"><figure id="26a65c01-9416-80bb-a6bf-edd0bcc54dcb" class="image"><a href="PASSIVE/Screenshot_2025-09-10_172359.png"><img style="width:528px" src="PASSIVE/Screenshot_2025-09-10_172359.png"/></a></figure></div><div style="display:contents" dir="ltr"><figure id="26a65c01-9416-8061-981e-e84d61830600" class="image"><a href="PASSIVE/image.png"><img style="width:528px" src="PASSIVE/image.png"/></a></figure></div><div style="display:contents" dir="auto"><p id="26a65c01-9416-80b6-873f-ffa1b1b9fe3c" class="">
+</p></div><div style="display:contents" dir="auto"><p id="26a65c01-9416-8062-9618-db626f9692a2" class=""><code>dnsrecon</code>:  simple command line tool to get DNS info of a website. </p></div><div style="display:contents" dir="auto"><p id="26a65c01-9416-8081-90fa-cc0cb058de17" class="">
+</p></div><div style="display:contents" dir="auto"><h2 id="26a65c01-9416-8071-b87e-d83d98410808" class="block-color-teal">CHECKING FOR <code>WAF</code>[web application Firewall] <mark class="highlight-default">:</mark> </h2></div><div style="display:contents" dir="auto"><blockquote id="26a65c01-9416-803b-b2f0-e05f4af30fa4" class="">How to identify if a website is being protected by a FIREWALL or a PROXY??<div style="display:contents" dir="auto"><p id="26a65c01-9416-80f0-acb0-d2480ec90f63" class=""><code><a href="https://github.com/EnableSecurity/wafw00f">wafw00f</a></code><a href="https://github.com/EnableSecurity/wafw00f"> </a>:  <div class="indented"><div style="display:contents" dir="auto"><p id="26a65c01-9416-808e-a753-de87a29ec222" class=""><em>syntax </em>: wafw00f {website name::::   https://example.com}</p></div></div></p></div></blockquote></div><div style="display:contents" dir="auto"><p id="26a65c01-9416-8009-88f2-c4743c05059d" class="">
+</p></div><div style="display:contents" dir="auto"><h2 id="26a65c01-9416-8069-8507-cd48a0382207" class=""><mark class="highlight-teal">SUBDOMAIN Enumeration with </mark><mark class="highlight-teal"><code><a href="https://github.com/aboul3la/Sublist3r">Sublist3r</a></code></mark><mark class="highlight-teal"><a href="https://github.com/aboul3la/Sublist3r"> </a></mark><mark class="highlight-default">:</mark></h2></div><div style="display:contents" dir="ltr"><figure id="26a65c01-9416-80e2-b61f-c21ee918b53d" class="image" style="text-align:left"><a href="PASSIVE/6af1f205-b92f-424d-a44c-111118715965.png"><img style="width:622.3399558498896px" src="PASSIVE/6af1f205-b92f-424d-a44c-111118715965.png"/></a></figure></div><div style="display:contents" dir="auto"><p id="26a65c01-9416-806e-a3cc-e01570206a9d" class="">
+</p></div><div style="display:contents" dir="auto"><h2 id="26a65c01-9416-80b4-acc3-f74844a67455" class=""><mark class="highlight-teal">GOOGLE </mark><mark class="highlight-teal"><code>DORKING</code></mark><mark class="highlight-teal"> </mark><mark class="highlight-default">:</mark><mark class="highlight-teal"> </mark></h2></div><div style="display:contents" dir="auto"><p id="26a65c01-9416-8013-8432-f3d8f590e41c" class="">
+</p></div><div style="display:contents" dir="auto"><p id="26a65c01-9416-80f8-ac64-f5c420423ec7" class=""><code><strong>site:</strong></code> Limits search to a specific domain.<div class="indented"><div style="display:contents" dir="auto"><ul id="26a65c01-9416-80dd-b689-d95cf58d7dc9" class="bulleted-list"><li style="list-style-type:disc"><em>Example:</em> <code>site:example.com admin</code></li></ul></div></div></p></div><div style="display:contents" dir="auto"><p id="26a65c01-9416-80a9-b8a5-fc4d84851042" class=""><code><strong>inurl:</strong></code> Finds pages with a specific word in the URL.<div class="indented"><div style="display:contents" dir="auto"><ul id="26a65c01-9416-8091-99cd-d6e984636b46" class="bulleted-list"><li style="list-style-type:disc"><em>Example:</em> <code>inurl:login.php</code></li></ul></div></div></p></div><div style="display:contents" dir="auto"><p id="26a65c01-9416-8094-b61f-c01196e986ca" class=""><code><strong>intitle:</strong></code> Finds pages with a specific word in the title.<div class="indented"><div style="display:contents" dir="auto"><ul id="26a65c01-9416-80b3-8dde-d961d1775fe0" class="bulleted-list"><li style="list-style-type:disc"><em>Example:</em> <code>intitle:&quot;index of&quot;</code></li></ul></div></div></p></div><div style="display:contents" dir="auto"><p id="26a65c01-9416-80a3-8e9e-e02a58b4b2ba" class=""><code><strong>filetype:</strong></code> Searches for specific file types.</p></div><div style="display:contents" dir="auto"><ul id="26a65c01-9416-8038-8f95-ebecd6428f0d" class="bulleted-list"><li style="list-style-type:disc"><em>Example:</em> <code>site:example.com filetype:pdf</code></li></ul></div><div style="display:contents" dir="auto"><ul id="26a65c01-9416-8020-8186-ec3c426712d6" class="bulleted-list"><li style="list-style-type:disc"><strong> </strong><code><strong>( * )</strong></code><strong> : </strong> Acts as a placeholder for any word.</li></ul></div><div style="display:contents" dir="auto"><ul id="26a65c01-9416-805b-b753-cd28a23d0760" class="bulleted-list"><li style="list-style-type:disc"><em>Example:</em>  <code>site:*.site.com</code> : to find sub-domains of a website. </li></ul></div><div style="display:contents" dir="auto"><p id="26a65c01-9416-80dd-895d-e3ec8f81a029" class="">
+</p></div><div style="display:contents" dir="auto"><blockquote id="26a65c01-9416-800e-bd8b-dee712123e17" class=""><em>if we want to see sites with directory listing enabled…!!</em><div style="display:contents" dir="auto"><p id="26a65c01-9416-8075-9b5d-dcc545877999" class=""><code>intitle: index of</code></p></div></blockquote></div><div style="display:contents" dir="auto"><blockquote id="26a65c01-9416-80d5-8e3d-e885e06a6445" class=""><em>to see older version of website…!!!</em><div style="display:contents" dir="auto"><p id="26a65c01-9416-80e8-a25b-f0e7b85a02f7" class=""><code><a href="https://web.archive.org/">waybackmachine</a></code></p></div></blockquote></div><div style="display:contents" dir="auto"><blockquote id="26a65c01-9416-80e2-94b7-fe1e19a2968f" class=""><em>find interesting things….!!</em><div style="display:contents" dir="auto"><p id="26a65c01-9416-803e-ab12-f74ba7d234c1" class=""><code>inurl:passwd.txt</code></p></div><div style="display:contents" dir="auto"><p id="26a65c01-9416-8086-981b-f702a015ea92" class=""><code>intitle:passwd.txt</code></p></div></blockquote></div><div style="display:contents" dir="auto"><p id="26a65c01-9416-8038-9e60-c7aca95e29b7" class=""><div class="indented"><div style="display:contents" dir="auto"><h3 id="26a65c01-9416-8070-bd7a-e874c5075575" class=""><a href="https://www.exploit-db.com/google-hacking-database">GOOGLE HACKING DATABASE</a> : </h3></div></div></p></div><div style="display:contents" dir="ltr"><figure id="26a65c01-9416-80b9-9d09-e3a36afdd2a5" class="image"><a href="PASSIVE/447f09cc-dfcc-449e-ad46-5ff4ba9fe383.png"><img style="width:626.9254341164453px" src="PASSIVE/447f09cc-dfcc-449e-ad46-5ff4ba9fe383.png"/></a></figure></div><div style="display:contents" dir="auto"><p id="26a65c01-9416-800f-9dc6-eb2a70a27136" class="">
+</p></div><div style="display:contents" dir="auto"><h2 id="26a65c01-9416-80ab-9dd7-e2f355baf892" class=""><mark class="highlight-teal">EMAIL HARVESTING WITH </mark><mark class="highlight-teal"><code>Harvester</code></mark><mark class="highlight-teal"> :</mark></h2></div><div style="display:contents" dir="auto"><p id="26a65c01-9416-80ec-8ec1-d9357c5427d3" class="">
+</p></div><div style="display:contents" dir="auto"><ul id="26a65c01-9416-8026-9381-c3310e05c144" class="bulleted-list"><li style="list-style-type:disc"><code>theHarvester -d </code><code><a href="http://hackersploit.org/">hackersploit.org</a></code></li></ul></div><div style="display:contents" dir="auto"><ul id="26a65c01-9416-80ce-916d-fb1a60950f97" class="bulleted-list"><li style="list-style-type:disc"><code>theHarvester -d </code><code><a href="http://hackersploit.org/">hackersploit.org</a></code><code> -b google,linkedin,dnsdumpster,duckduckgo,crtsh</code></li></ul></div><div style="display:contents" dir="auto"><ul id="26a65c01-9416-809f-bcc9-e5f79b66a835" class="bulleted-list"><li style="list-style-type:disc"><code>theHarvester -d </code><code><a href="http://zonetransfer.me/">zonetransfer.me</a></code><code> -b all</code></li></ul></div><div style="display:contents" dir="auto"><h2 id="26a65c01-9416-80b4-94fe-c6aa8d79f394" class=""><mark class="highlight-teal">LEAKED PASSWORD DATABASES : </mark></h2></div><div style="display:contents" dir="auto"><p id="26a65c01-9416-80da-ba87-d7ac72af4adb" class=""><code><a href="http://haveibeenpwned.com">haveibeenpwned.com</a></code>: if we get email from harvester then we can find if passwords are leaked. </p></div><div style="display:contents" dir="auto"><p id="26a65c01-9416-808d-b886-f6069ea2698b" class="">
+</p></div></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>

