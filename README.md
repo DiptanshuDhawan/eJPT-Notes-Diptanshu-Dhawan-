@@ -24,6 +24,24 @@
 ## 👋 Introduction
 Hi! I passed the **eJPT (eLearnSecurity Junior Penetration Tester)** certification. During my preparation, I compiled a detailed knowledge base in Notion to track tools, methodologies, and labs. These notes are designed to be a "cheat sheet" for anyone taking the exam.
 
+## 🎓 eJPT Exam at a Glance
+The **eJPTv2** is a 100% practical, hands-on certification that simulates a real-world assessment across a dynamic lab environment.
+* **Duration:** 48 Hours.
+* **Format:** 35 multi-choice questions based on lab findings.
+* **Passing Score:** 70% overall.
+
+---
+
+## 🗂️ Note Architecture
+These notes follow the **Penetration Testing Lifecycle** to mirror a real engagement. I have specifically organized the **Metasploit Framework** section by phase so you can find the right module at the right time:
+
+* **Recon & Scanning:** Auxiliary modules for service discovery and enumeration.
+* **Vulnerability Assessment:** Mapping services to MSF exploits and `searchsploit`.
+* **Exploitation:** Payload selection (staged vs. non-staged) and listener configuration.
+* **Post-Exploitation:** Local enumeration, looting, and **Pivoting/Routing**.
+
+---
+
 ## 📺 Exam Experience & Tips
 I recorded a full breakdown of my exam experience, study path, and tips on my YouTube channel.
 - 🎥 **Watch the video:** [HackWithDD - My eJPT Journey](https://youtu.be/ympDYwlDWxg)
